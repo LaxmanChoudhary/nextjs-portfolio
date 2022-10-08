@@ -1,0 +1,34 @@
+$md-chip-height: 32px;
+$md-chip-icon-height: 24px;
+$md-chip-color: #e0e0e0;
+
+.mdChip {
+  display: inline-block;
+  background: $md-chip-color;
+  padding: 0 12px;
+  border-radius: 32px;
+  font-size: 13px;
+  // cursor: pointer;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 1px 1px 3px rgba($color: #030303, $alpha: 0.3);
+  }
+}
+
+.mdChip {
+  height: $md-chip-height;
+  line-height: $md-chip-height;
+  margin: 3px 10px 3px 0;
+}
+
+.mdChipIcon {
+  display: block;
+  float: left;
+  background: rgb(244, 244, 244);
+  height: $md-chip-icon-height;
+  width: $md-chip-icon-height;
+  line-height: $md-chip-icon-height;
+  border-radius: 50%;
+  text-align: center;
+  margin: 4px 8px 0 -8px;
+}
