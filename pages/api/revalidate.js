@@ -8,9 +8,9 @@ export default async function handler(req, res) {
     // this should be the actual path not a rewritten path
     // e.g. for "/blog/[slug]" this should be "/blog/post-1"
     await res.revalidate('/');
-    // await res.unstable_revalidate('/stats');
-    // await res.unstable_revalidate('portfolio');
-    // await res.unstable_revalidate('/more');
+    await res.revalidate('/stats');
+    await res.revalidate('portfolio');
+    await res.revalidate('/more');
     return res.json({ revalidated: true })
   } catch (err) {
     // If there was an error, Next.js will continue
