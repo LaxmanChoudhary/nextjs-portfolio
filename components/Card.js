@@ -6,13 +6,13 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 export default function Card({ project }) {
   return (
-    <div className={styles.Card}>
+    <div className={styles.Card} /*style={{background:`center / cover no-repeat url(${project.imageUrl})`}}*/>
       <div className={styles.cardHeader}>
         <Image
           src={project.imageUrl}
           alt={project.title}
-          width="400px"
-          height="300px"
+          layout="fill"
+          objectFit="cover"
         />
       </div>
       <div className={styles.projectTags}>

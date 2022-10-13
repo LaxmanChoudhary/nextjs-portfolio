@@ -9,24 +9,24 @@ const SideBar = () => {
 
   return(
     <nav className={styles.navbar}>
-      <div className={styles.navlink+" "+(router.pathname == "/"?"active":"")}>
-        <Link href="/">
-          <a><FontAwesomeIcon icon={faHome} size="xl" /></a>
+      <div className={styles.navlink}>
+        <Link href="/" replace>
+          <a className={router.pathname == "/"?"active":""}><FontAwesomeIcon icon={faHome} size="xl" /></a>
         </Link>
       </div>
-      <div className={styles.navlink+" "+(router.pathname == "/stats"?"active":"")}>
-        <Link href="/stats">
-          <a><FontAwesomeIcon icon={faUserAstronaut} size="xl"/></a>
+      <div className={styles.navlink}>
+        <Link href="/stats" replace>
+          <a className={router.pathname == "/stats"?"active":""}><FontAwesomeIcon icon={faUserAstronaut} size="xl"/></a>
         </Link>
       </div>
-      <div className={styles.navlink+" "+(router.pathname == "/portfolio"?"active":"")}>
-        <Link href="/portfolio">
-          <a><FontAwesomeIcon icon={faCertificate} size="xl"/></a>
+      <div className={styles.navlink}>
+        <Link href="/portfolio" replace>
+          <a className={router.pathname == "/portfolio"?"active":""}><FontAwesomeIcon icon={faCertificate} size="xl"/></a>
         </Link>
       </div>
-      <div className={styles.navlink+" "+(router.pathname == "/more"?"active":"")}>
-        <Link href="/more">
-          <a><FontAwesomeIcon icon={faTerminal} size="xl"/></a>
+      <div className={styles.navlink}>
+        <Link href="/more" replace>
+          <a className={router.pathname == "/more"?"active":""}><FontAwesomeIcon icon={faTerminal} size="xl"/></a>
         </Link>
       </div>
     </nav>
