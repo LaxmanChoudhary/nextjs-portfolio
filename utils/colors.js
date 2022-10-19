@@ -1,8 +1,8 @@
 export const colors = {
   default: "#e0e0e0",
-  "beginner": "#F5E4D7",
-  "intermediate": "#E5D1D0",
-  "experienced": "#BDBBB6"
+  "beginner": "#fcbf49",
+  "intermediate": "#f77f00",
+  "experienced": "#d62828"
 }
 
 export const blue = {

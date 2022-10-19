@@ -7,13 +7,13 @@ export default function Chip({ chip, bgColor, noicon }) {
   return (
     <div
       className={styles.mdChip}
-      style={{ background: colors[bgColor] }}
+      style={{ border: `1px solid ${colors[bgColor]}` }}
     >
       {noicon?null:
       <div className={styles.mdChipIcon}>
         {chip.icon?<FontAwesomeIcon icon={faBrands[chip.icon]} />: chip.name.slice(0, 2)}
+        <p>{chip.name}</p>
       </div>}
-      {chip.name}
     </div>
   );
 }
