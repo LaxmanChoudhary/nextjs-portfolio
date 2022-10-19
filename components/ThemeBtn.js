@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBrush } from '@fortawesome/free-solid-svg-icons'
 
 const toggleTheme = () => {
-  document.body.classList.toggle('light-theme')
+  document.body.classList.toggle('sec-theme')
 }
 
 export default function ThemeBtn() {
