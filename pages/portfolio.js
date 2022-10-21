@@ -13,18 +13,11 @@ export default function Portfolio({ data }) {
         <div className="skill-con">
           <div className="main-title skill-title">Skills</div>
           <div className="skills">
-            <div className="color-scheme">
-              <p style={{ background: colors["beginner"] }}>beginner</p>
-              <p style={{ background: colors["intermediate"] }}>intermediate</p>
-              <p style={{ background: colors["experienced"] }}>experienced</p>
-            </div>
             <ChipSet chips={skillsData} />
           </div>
         </div>
         <div className="pfolio">
-          <div className="main-title">
-            <h1>Portfolio</h1>
-          </div>
+          <div className="main-title">Portfolio</div>
           <div className="projects">
             {myProjects.map((myProject) => (
               <Card project={myProject} key={myProject.id} />

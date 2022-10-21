@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../styles/Card.module.scss";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -8,12 +8,13 @@ export default function Card({ project }) {
   return (
     <div className={styles.Card} /*style={{background:`center / cover no-repeat url(${project.imageUrl})`}}*/>
       <div className={styles.cardHeader}>
-        <Image
+        {/* <Image
           src={project.imageUrl}
           alt={project.title}
           layout="fill"
           objectFit="cover"
-        />
+        /> */}
+        <h2>{project.title}</h2>
       </div>
       <div className={styles.projectTags}>
         {project.stack.map((each) => (
@@ -23,7 +24,6 @@ export default function Card({ project }) {
         ))}
       </div>
       <div className={styles.cardBody}>
-        <h4>{project.title}</h4>
         <p>{project.description}</p>
       </div>
       <div className={styles.cardFooter}>
