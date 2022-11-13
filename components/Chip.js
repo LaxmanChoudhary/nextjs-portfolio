@@ -11,7 +11,7 @@ export default function Chip({ chip, bgColor, noicon }) {
     >
       {noicon?null:
       <div className={styles.mdChipIcon}>
-        {chip.icon?<FontAwesomeIcon icon={faBrands[chip.icon]} />: chip.name.slice(0, 2)}
+        {chip.icon?<FontAwesomeIcon icon={faBrands[chip.icon]} />: null}
         <p>{chip.name}</p>
       </div>}
     </div>
