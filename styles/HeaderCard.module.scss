@@ -35,3 +35,11 @@
   gap: 1.5rem;
   margin: .5rem;
 }
+
+@media screen and (max-width: 768px) {
+  .cardHeader {
+    h1{
+      font-size: 1.5rem;
+    }
+  }
+}
