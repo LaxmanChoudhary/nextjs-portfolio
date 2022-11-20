@@ -36,8 +36,12 @@
   margin: .5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 550px) {
+  .cardContainer{
+    padding: 1.5rem;
+  }
   .cardHeader {
+    margin: 0;
     h1{
       font-size: 1.5rem;
     }
