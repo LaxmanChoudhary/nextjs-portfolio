@@ -1,8 +1,10 @@
-import {getNameData} from '../lib/mongoatlasApi';
 import HeaderCard from '../components/HeaderCard';
 
-export default function Home({userdata}) {
-  const user = userdata.documents[0]
+export default function Home() {
+  const user = {
+    "firstName": "laxman",
+    "lastName": "choudhary",
+  }
 
   return (
     <section id="home">
@@ -11,14 +13,4 @@ export default function Home({userdata}) {
       </div>
     </section>
   );
-}
-
-export async function getStaticProps() {
-  const userdata = await getNameData();
-
-  return {
-    props: {
-      userdata,
-    },
-  }
 }

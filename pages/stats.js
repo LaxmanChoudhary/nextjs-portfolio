@@ -1,22 +1,46 @@
 import {
   faBriefcase,
-  faGraduationCap
+  faGraduationCap,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { getStatsData } from "../lib/mongoatlasApi";
 
-export default function Stats({data}) {
-  const bio = data.documents[0].bio;
-  const timelineData = data.documents[0].timelineData;
+export default function Stats() {
+  const bio = "Hi, thanks for passing by my portfolio.\nDeveloped using next js,  work is in progress...";
+  const timelineData = [
+    {
+      role: "Software Engineer",
+      company: "Tata Consultancy Services",
+      type: "professional",
+      durationStart: "Aug 2021",
+      durationEnd: "Present",
+      description:
+        "Working as Python lead. Developing analytics solution for the client.\nHands-on migrating old Java infra to Node-js cloud infra.",
+    },
+    {
+      role: "Python Intern",
+      company: "Necessario Innovations Pvt. Ltd.",
+      type: "professional",
+      durationStart: "Mar 2021",
+      durationEnd: "Jun 2021",
+      description:
+        "Worked at the startup building products. R&D, tinkering raspberry pi",
+    },
+    {
+      role: "BE (IT)",
+      company: "Aditya Silver Oak Institute Of Technology",
+      type: "academic",
+      durationStart: "2016",
+      durationEnd: "2020",
+      description: "Grade: 8.16 / 10",
+    },
+  ];
   return (
     <section id="stats">
       <div className="content">
         <div className="about">
           <div className="main-title">about me</div>
           <div className="shadow-card">
-            <p>
-              {bio}
-            </p>
+            <p>{bio}</p>
             <div className="btn-con">
               <a href="/cvLaxman.pdf" className="cv-btn">
                 <span className="btn-text">Download CV</span>
@@ -50,14 +74,4 @@ export default function Stats({data}) {
       </div>
     </section>
   );
-}
-
-export async function getStaticProps() {
-  const data = await getStatsData();
-
-  return {
-    props: {
-      data,
-    },
-  }
 }
