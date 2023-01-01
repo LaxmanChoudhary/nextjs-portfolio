@@ -4,8 +4,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Stats() {
-  const bio = "Hi, thanks for passing by my portfolio.\nDeveloped using next js,  work is in progress...";
+export default function Experience() {
   const timelineData = [
     {
       role: "Software Engineer",
@@ -35,37 +34,31 @@ export default function Stats() {
     },
   ];
   return (
-    <section id="stats">
-      <div className="content">
-        <div className="about">
-          <div className="main-title">about me</div>
-          <div className="shadow-card">
-            <p>{bio}</p>
-            <div className="btn-con">
-              <a href="/cvLaxman.pdf" className="cv-btn">
-                <span className="btn-text">Download CV</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="timeline">
-          <div className="main-title">timeline</div>
-          <div className="t-container">
+    <section id="experience" aria-label="my experiences" className="py-20 sm:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <p className="text-2xl font-bold tracking-tight">
+          <span className="text-5xl text-orange-700 capitalize">E</span>xperience
+        </p>
+        <div className="bg-slate-50 rounded-md p-10 mt-8 shadow-sm">
+          <div className="grid gap-2 grid-cols-1">
             {timelineData.map((data) => (
-              <div className="tl-item" key={data.role + data.company}>
-                <div className="tl-icon">
+              <div
+                className="relative pl-8 pb-6 border-l-2 border-orange-700"
+                key={data.role + data.company}
+              >
+                <div className="absolute w-8 h-8 -left-[17px] flex justify-center place-items-center -top-3 text-orange-700 bg-slate-200 rounded-full p-1">
                   {data.type == "academic" ? (
                     <FontAwesomeIcon icon={faGraduationCap} />
                   ) : (
                     <FontAwesomeIcon icon={faBriefcase} />
                   )}
                 </div>
-                <p className="tl-duration">
+                <p className="text-sm">
                   {data.durationStart} - {data.durationEnd}
                 </p>
-                <h5>
+                <p className="text-lg font-semibold uppercase">
                   {data.role} <span>- {data.company}</span>
-                </h5>
+                </p>
                 <p>{data.description}</p>
               </div>
             ))}

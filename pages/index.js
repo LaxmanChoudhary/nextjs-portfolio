@@ -1,16 +1,24 @@
-import HeaderCard from '../components/HeaderCard';
+import HeroCard from '../components/HeroCard';
+import About from '../components/About';
+import Skills from '../components/Skills';
+import Experience from '../components/Experience';
+import Works from '../components/Works';
+import Certifications from '../components/Certifications';
 
 export default function Home() {
   const user = {
-    "firstName": "laxman",
-    "lastName": "choudhary",
+    "firstName": "john",
+    "lastName": "doe",
   }
 
   return (
-    <section id="home">
-      <div className="content">
-        <HeaderCard user={user} />
-      </div>
-    </section>
+    <>
+      <HeroCard user={user} />
+      <About />
+      <Experience />
+      <Certifications />
+      <Works />
+      <Skills />
+    </>
   );
 }
