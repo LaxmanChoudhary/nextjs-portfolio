@@ -3,13 +3,13 @@ import * as faBrands from "@fortawesome/free-brands-svg-icons";
 
 export default function Skills() {
   const skills = [
-    "faHtml5",
-    "faCss3",
-    "faSquareJs",
-    "faPython",
-    "faReact",
-    "faGoogle",
-    "faLinux",
+    {skill: "html", icon:"faHtml5"},
+    {skill: "css", icon:"faCss3"},
+    {skill: "javascript", icon:"faSquareJs"},
+    {skill: "python", icon:"faPython"},
+    {skill: "react", icon:"faReact"},
+    {skill: "nodejs", icon:"faNodeJs"},
+    {skill: "linux", icon:"faLinux"}
   ];
 
   return (
@@ -22,10 +22,10 @@ export default function Skills() {
         <p className="text-2xl capitalize font-bold tracking-tight">
           <span className="text-5xl text-orange-700 capitalize">s</span>kills
         </p>
-        <div className="flex flex-wrap gap-4 justify-evenly p-4 mt-8">
-          {skills.map((skill) => (
-            <div key={skill}>
-              <FontAwesomeIcon icon={faBrands[skill]} size="3x" opacity={0.5} />
+        <div className="flex flex-wrap justify-center gap-8 p-4 mt-8">
+          {skills.map((skl) => (
+            <div key={skl.skill}>
+              <FontAwesomeIcon  icon={faBrands[skl.icon]} size="3x" opacity={0.5} titleId={skl.skill} title={skl.skill} />
             </div>
           ))}
         </div>

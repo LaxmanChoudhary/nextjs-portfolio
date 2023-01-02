@@ -47,10 +47,10 @@ export default function Certifications() {
         <div className="grid grid-col-1 lg:grid-cols-2 m-8 p-4 gap-8">
           {certs.map((cert) => (
             <div
-              className="relative p-4 border-2 border-slate-500 rounded-lg h-full"
+              className="relative p-4 border-2 border-neutral-500 rounded-lg h-full"
               key={cert.id}
             >
-              <span className="image-container border-2 border-slate-300 rounded-lg p-1.5 -left-4 -top-3 bg-white">
+              <span className="image-container border-2 border-neutral-500 rounded-lg p-1.5 -left-4 -top-3 bg-white">
                 <Image
                   src={path(cert.by)}
                   alt={cert.by}
@@ -58,15 +58,13 @@ export default function Certifications() {
                   className="image-cert"
                 />
               </span>
-              <span className="absolute h-6 w-6 rounded-full bg-gradient-to-r from-rose-800 to-rose-500  -top-3 right-6"></span>
+              <span className="absolute h-6 w-6 rounded-full bg-gradient-to-r from-neutral-900 to-neutral-500 -top-3 right-6"></span>
               <div className="">
-                <p className="text-xl text-slate-700 font-bold">
+                <p className="text-xl text-neutral-700 font-semibold">
                   {cert.title}
                 </p>
-                <p className="text-sm font-thin">valid from: {cert.in}</p>
-                <p className="text-sm font-thin">
-                  valid till: {cert.till ? cert.till : "∞"}
-                </p>
+                {/* <p className="text-sm font-thin">valid from: {cert.in}</p>
+                <p className="text-sm font-thin">valid till: {cert.till ? cert.till : "∞"}</p> */}
               </div>
             </div>
           ))}

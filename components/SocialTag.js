@@ -4,7 +4,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function SocialTags() {
   return (
-    <div className="fixed flex flex-col gap-4 top-20 right-0 bg-slate-900 text-zinc-100 p-4 z-50">
+    <div className="fixed flex flex-col gap-3 top-20 right-0 bg-neutral-900 text-neutral-100 p-3 z-50">
       <div className="hover:opacity-50">
         <a
           href="https://www.linkedin.com/in/laxmanchoudhary"

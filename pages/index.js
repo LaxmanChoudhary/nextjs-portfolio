@@ -6,18 +6,13 @@ import Works from '../components/Works';
 import Certifications from '../components/Certifications';
 
 export default function Home() {
-  const user = {
-    "firstName": "john",
-    "lastName": "doe",
-  }
-
   return (
     <>
-      <HeroCard user={user} />
+      <HeroCard />
       <About />
       <Experience />
       <Certifications />
-      <Works />
+      {/* <Works /> */}
       <Skills />
     </>
   );

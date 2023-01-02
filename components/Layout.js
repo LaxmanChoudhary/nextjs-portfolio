@@ -1,13 +1,11 @@
 import Head from 'next/head';
-import Header from './Header';
 import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return(
-    <div className='bg-slate-100 text-slate-800'>
+    <div>
       <Head><title>{"Welcome"}</title></Head>
-      {/* <Header /> */}
-      <main>
+      <main className='bg-neutral-100 text-slate-900'>
         {children}
       </main>
       <Footer />

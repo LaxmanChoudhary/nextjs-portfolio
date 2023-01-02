@@ -12,8 +12,10 @@ export default function Experience() {
       type: "professional",
       durationStart: "Aug 2021",
       durationEnd: "Present",
-      description:
-        "Working as Python lead. Developing analytics solution for the client.\nHands-on migrating old Java infra to Node-js cloud infra.",
+      description:"Role: Systems Engineer\nDesigning & developing Analytical enterprise solutions.\nTools in use: Python, NodeJs.\n\
+      Python technical expertise.\n\nRole: ASE (Assistant System Engineer)\nDeveloped analytic functions using python for the client to create meaningful insights.\n\
+      Supported ongoing server maintenance and created automation to support the operations.\n\
+      Contributed to migrating existing Java app functionalities to a newer framework based on Node Js",
     },
     {
       role: "Python Intern",
@@ -21,8 +23,9 @@ export default function Experience() {
       type: "professional",
       durationStart: "Mar 2021",
       durationEnd: "Jun 2021",
-      description:
-        "Worked at the startup building products. R&D, tinkering raspberry pi",
+      description: "Worked at the startup building products. R&D, tinkering raspberry pi.\nWorked on Python backend (micro-framework) and frontend.\
+      Managing and documenting the overall development.\nTesting and Managing SoM like Jetson nano, raspberry pi, image sensors, and lenses.\n\
+      Contributed to the initial development phase of the product.\nWorked on flask server built upon Raspberry pi SoM.\nSuccessfully deployed flask on Apache server.",
     },
     {
       role: "BE (IT)",
@@ -46,20 +49,20 @@ export default function Experience() {
                 className="relative pl-8 pb-6 border-l-2 border-orange-700"
                 key={data.role + data.company}
               >
-                <div className="absolute w-8 h-8 -left-[17px] flex justify-center place-items-center -top-3 text-orange-700 bg-slate-200 rounded-full p-1">
+                <div className="absolute w-8 h-8 -left-[17px] flex justify-center place-items-center -top-3 text-orange-700 bg-neutral-200 rounded-full p-1">
                   {data.type == "academic" ? (
                     <FontAwesomeIcon icon={faGraduationCap} />
                   ) : (
                     <FontAwesomeIcon icon={faBriefcase} />
                   )}
                 </div>
-                <p className="text-sm">
+                <p className="text-sm font-thin">
                   {data.durationStart} - {data.durationEnd}
                 </p>
                 <p className="text-lg font-semibold uppercase">
                   {data.role} <span>- {data.company}</span>
                 </p>
-                <p>{data.description}</p>
+                <p className="whitespace-pre-line text-sm">{data.description}</p>
               </div>
             ))}
           </div>
