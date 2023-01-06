@@ -9,11 +9,6 @@
 }
 
 // for nextjs image width issue
-.image-container {
-  position: absolute;
-  width: 100px;
-}
-
 .image-container > span {
   position: relative !important;
 }
@@ -23,5 +18,4 @@
   width: 100% !important;
   position: relative !important;
   height: unset !important;
-  opacity: 90%;
 }

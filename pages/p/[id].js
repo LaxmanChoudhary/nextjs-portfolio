@@ -1,7 +1,9 @@
-import Card from "../components/Card";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-export default function Works() {
-  const myProjects = [
+export default function Project() {
+  const router = useRouter();
+  const allProjects = [
     {
       id: "1",
       title: "React Todo SPA",
@@ -15,7 +17,7 @@ export default function Works() {
         "google cloud platform",
       ],
       projectUrls: { websiteUrl: "https://www.abc.xyz" },
-      imageUrl: "/undraw_react.svg",
+      imageUrl: "https://i.imgur.com/tC8nFKH.jpg",
     },
     {
       id: "2",
@@ -33,7 +35,7 @@ export default function Works() {
         "google cloud platform",
       ],
       projectUrls: { githubUrl: "https://www.github.com" },
-      imageUrl: "/undraw_tasks.svg",
+      imageUrl: "/images/react_hero.png",
     },
     {
       id: "3",
@@ -54,20 +56,19 @@ export default function Works() {
         githubUrl: "https://www.github.com",
         websiteUrl: "https://www.abc.xyz",
       },
-      imageUrl: "/undraw_prog.svg",
+      imageUrl: "/images/auto.webp",
     },
   ];
+  const { id } = router.query;
+  const currentProj = allProjects.find(each => each.id == id)
 
   return (
-    <section id="works" aria-label="my experiences" className="py-20 sm:py-32 bg-neutral-0">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <p className="text-2xl font-bold tracking-tight">
-          <span className="text-5xl text-orange-700 capitalize">W</span>orks
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-16 mt-8 p-4">
-          {myProjects.map((myProject) => (
-            <Card project={myProject} key={myProject.id} />
-          ))}
+    <section id="blog" className="relative max-w-7xl mx-auto overflow-hidden mt-20 mb-28 sm:my-20 h-screen">
+      <div className="">
+        <button className="bg-neutral-900 text-neutral-100 px-4 py-2 hover:bg-neutral-700 active:bg-neutral-800" onClick={() => router.back()}>Back</button>
+        <div className="flex flex-col p-4">
+          <p className="text-3xl font-semibold text-center">{currentProj.title}</p>
+          <p className="max-w-3xl mx-auto mt-8">{currentProj.description}</p>
         </div>
       </div>
     </section>

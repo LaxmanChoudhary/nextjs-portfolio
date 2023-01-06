@@ -42,7 +42,7 @@ export default function Experience() {
         <p className="text-2xl font-bold tracking-tight">
           <span className="text-5xl text-orange-700 capitalize">E</span>xperience
         </p>
-        <div className="bg-slate-50 rounded-md p-10 mt-8 shadow-sm">
+        <div className="bg-neutral-100 rounded-md p-10 mt-8 shadow-sm">
           <div className="grid gap-2 grid-cols-1">
             {timelineData.map((data) => (
               <div

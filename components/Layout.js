@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return(
     <div>
       <Head><title>{"Welcome"}</title></Head>
-      <main className='bg-neutral-100 text-slate-900'>
+      <main>
         {children}
       </main>
       <Footer />

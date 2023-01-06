@@ -50,12 +50,12 @@ export default function Certifications() {
               className="relative p-4 border-2 border-neutral-500 rounded-lg h-full"
               key={cert.id}
             >
-              <span className="image-container border-2 border-neutral-500 rounded-lg p-1.5 -left-4 -top-3 bg-white">
+              <span className="image-container absolute w-[100px] border-2 border-neutral-500 rounded-lg p-1.5 -left-4 -top-3 bg-white">
                 <Image
                   src={path(cert.by)}
                   alt={cert.by}
                   layout="fill"
-                  className="image-cert"
+                  className="image-cert opacity-90"
                 />
               </span>
               <span className="absolute h-6 w-6 rounded-full bg-gradient-to-r from-neutral-900 to-neutral-500 -top-3 right-6"></span>
