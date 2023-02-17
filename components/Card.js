@@ -5,7 +5,7 @@ export default function Card({ project }) {
   const router = useRouter();
 
   return (
-    <div className="relative rounded-lg md:place-content-center p-4 border-2">
+    <div className="relative rounded-lg md:place-content-center p-4 border-2 min-h-[200px]">
       <div className="relative grid gap-2 grid-cols-2 md:grid-cols-1 w-full h-full">
         <div className="image-container flex p-0.5 md:p-8">
           <Image
