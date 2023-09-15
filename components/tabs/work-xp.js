@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
 
 export default function WorkXP() {
   const [selected, setSelected] = useState(0);
@@ -11,11 +12,15 @@ export default function WorkXP() {
       end: "Present",
       org: "Tata Consultancy Services",
       skillset: ["python", "linux", "rpi"],
-      description:
-        "Role: Systems Engineer\nDesigning & developing Analytical enterprise solutions.\nTools in use: Python, NodeJs.\n\
-        Python technical expertise.\n\nRole: ASE (Assistant System Engineer)\nDeveloped analytic functions using python for the client to create meaningful insights.\n\
-        Supported ongoing server maintenance and created automation to support the operations.\n\
-        Contributed to migrating existing Java app functionalities to a newer framework based on Node Js",
+      description:`
+**Systems Engineer**  
+Designing & developing Analytical enterprise solutions.  
+Stack used: Python, NodeJs.
+
+**ASE (Assistant System Engineer)**  
+Developed analytic functions using python for the client to create meaningful insights.  
+Supported ongoing server maintenance and created automation to support the operations.  
+Contributed to migrating existing Java app functionalities to a newer framework based on Node Js`,
     },
     {
       id: 1,
@@ -42,9 +47,9 @@ export default function WorkXP() {
             {workxpList.map((job) => (
               <div
                 key={job.id}
-                className={`bg-slate-100 text-left ${
-                  job.id == selected && "bg-slate-600 text-slate-50"
-                } py-2 px-4 min-w-[180px]`}
+                className={`bg-slate-100 text-left p-2 hover:bg-slate-300 cursor-pointer ${
+                  job.id == selected && "border-b-4 border-slate-800"
+                } py-2 px-4 min-w-[180px] transition-all ease-in-out duration-300`}
                 onClick={() => setSelected(job.id)}
               >
                 <p className="text-inherit">{job.role}</p>
@@ -63,7 +68,7 @@ export default function WorkXP() {
             </p>
             <p className="text-2xl font-bold">{selectedJob.role}</p>
             <p className="text-xl">{selectedJob.org}</p>
-            <p>{selectedJob.description}</p>
+            <ReactMarkdown className="markdown">{selectedJob.description}</ReactMarkdown>
           </div>
         </div>
       </div>

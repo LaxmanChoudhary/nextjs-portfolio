@@ -6,6 +6,7 @@ import reactIcon from "../../public/images/react-svg-icon.svg";
 import nextjsIcon from "../../public/images/nextjs-svg-icon.svg";
 import pythonIcon from "../../public/images/python-svg-icon.svg";
 import gcpIcon from "../../public/images/gcp-svg-icon.svg";
+import linuxIcon from "../../public/images/linux-svg-icon.svg";
 
 export default function Skills() {
   const skillsList = [
@@ -40,6 +41,10 @@ export default function Skills() {
         {
           icon: gcpIcon,
           alt: "gcp",
+        },
+        {
+          icon: linuxIcon,
+          alt: "linux",
         },
       ],
     },

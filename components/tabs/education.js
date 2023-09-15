@@ -14,7 +14,10 @@ export default function Education() {
       <p className="font-semibold mb-4">Education</p>
       <div>
         {journey.map((each) => (
-          <div key={each.id} className="border shadow p-4 hover:border-slate-600">
+          <div
+            key={each.id}
+            className="border shadow p-4 hover:bg-slate-200 transition-all ease-in-out duration-200"
+          >
             <p className="font-semibold uppercase">{each.major}</p>
             <p className="tracking-wider">{each.institute}</p>
             <p className="font-light text-sm">
