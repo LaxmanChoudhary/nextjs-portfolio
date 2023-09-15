@@ -2,20 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.autogrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-content: center;
+
+.resume-container {
+  // height: 100vh;
+  padding: 24px;
 }
 
-// for nextjs image width issue
-.image-container > span {
-  position: relative !important;
-}
-
-.image-cert {
-  object-fit: contain;
-  width: 100% !important;
-  position: relative !important;
-  height: unset !important;
+.markdown > * {
+  all: revert;
 }

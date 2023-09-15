@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@adobe/react-spectrum": "^3.29.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
@@ -17,17 +18,20 @@
     "@material/chips": "^14.0.0",
     "@next/font": "^13.0.3",
     "axios": "^0.27.2",
-    "next": "^12.3.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "next": "^13.4.19",
+    "react": "^18.2.0",
+    "react-aria": "^3.27.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.7",
     "react-particles": "^2.7.1",
+    "react-stately": "^3.25.0",
     "sharp": "^0.31.1",
     "tsparticles": "^2.7.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "eslint": "8.11.0",
-    "eslint-config-next": "12.1.0",
+    "eslint-config-next": "^13.4.19",
     "postcss": "^8.4.20",
     "sass": "^1.49.10",
     "tailwindcss": "^3.2.4"

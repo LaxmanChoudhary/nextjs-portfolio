@@ -9,6 +9,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/resume',
+        permanent: true,
+      },
+    ]
+  }
 }
 
 module.exports = nextConfig
