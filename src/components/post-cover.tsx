@@ -16,18 +16,16 @@ export default function PostCover({
 }: PostWithSlug) {
   return (
     <article className="relative justify-self-center">
-      <Link href={`/posts/${slug}`}>
-        <div className="max-w-[450px] min-w-[350px]">
-          <AspectRatio ratio={16 / 9}>
-            <Image
-              src={coverImage}
-              alt={`cover image for post ${title}`}
-              className="absolute rounded object-cover brightness-75 hover:brightness-90"
-              fill
-            />
-          </AspectRatio>
-        </div>
-      </Link>
+      <div className="max-w-[450px] min-w-[350px]">
+        <AspectRatio ratio={16 / 9}>
+          <Image
+            src={coverImage}
+            alt={`cover image for post ${title}`}
+            className="absolute bg-slate-600 rounded object-cover brightness-75 hover:brightness-90"
+            fill
+          />
+        </AspectRatio>
+      </div>
       <div className="absolute bottom-0 text-white p-4">
         {postedOn !== updatedOn && <p className="text-xs">Updated</p>}
         <div className="flex gap-2">
@@ -38,6 +36,9 @@ export default function PostCover({
         <p className="text-lg font-semibold">{title}</p>
         <p>{excerpt}</p>
       </div>
+      <Link href={`/posts/${slug}`}>
+        <span className="absolute inset-0"></span>
+      </Link>
     </article>
   );
 }

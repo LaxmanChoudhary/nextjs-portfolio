@@ -32,7 +32,9 @@ export default async function PostPage({ params }: Params) {
     <div className="max-w-prose mx-auto">
       <div className="mb-8">
         <p className="text-4xl font-bold">{post.title}</p>
-        <p className="text-sm tracking-tight">{formatPostDate(post.postedOn)}</p>
+        <p className="text-sm tracking-tight">
+          {formatPostDate(post.postedOn)}
+        </p>
       </div>
       <div className="prose dark:prose-invert mx-auto">
         <MDXRenderer {...html} />
