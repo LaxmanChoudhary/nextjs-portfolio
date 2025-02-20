@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, IBM_Plex_Sans, Poppins } from "next/font/google";
 import "./globals.css";
-import Header from "./header";
-import Footer from "./footer";
-import { ThemeProvider } from "./theme-provider";
+// import Header from "./header";
+// import Footer from "./footer";
+// import { ThemeProvider } from "./theme-provider";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+const ibmPlex = IBM_Plex_Sans({ weight: ["100", "200", "300", "400", "500", "600", "700"], subsets: ["cyrillic"] })
+// const poppins = Poppins({ weight: ["100", "200", "300", "400", "500", "600", "700"], subsets: ["devanagari"] })
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -19,18 +21,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={ibmPlex.className}>
         {/* below item generates warning in browser console */}
-        <ThemeProvider
-          attribute="class"
+        {/* <ThemeProvider
+          // attribute="class"
           defaultTheme="system"
           enableColorScheme
           disableTransitionOnChange
-        >
-          <Header />
+        > */}
+          {/* <Header />
           <main className="mx-12 xl:mx-auto max-w-7xl mt-16 mb-16">{children}</main>
-          <Footer />
-        </ThemeProvider>
+          <Footer /> */}
+          <main>{children}</main>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
