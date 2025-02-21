@@ -91,7 +91,7 @@ const Skills = () => {
         <p className="uppercase opacity-70 text-xs">
           Technologies that i have worked with and familiar to
         </p>
-        <div className="text-sm mt-4 space-y-2">
+        <div className="pt-5 text-sm space-y-2">
           <Skill
             title="frontend"
             items={["Javascript", "React", "NextJs", "Angular"]}
@@ -143,18 +143,25 @@ const Projects = () => {
         <p className="uppercase opacity-70 text-xs">Here are my projects</p>
         <div className="divide-y">
           <ProjectSnapshot
-            title="snipeteer"
-            tags={["personal"]}
-            excerpt="A snippet storing service using nextjs and pSQL serverless."
-            link="#"
+            title="Latex to PDF conversion APi"
+            tags={["personal", "docker", "k8s"]}
+            excerpt="An app capable of converting latext docs to pdf. Uses tectonic engine (rust based latex processor) at core. Provides endpoint to work with."
+            link="/blogs/latex-to-pdf"
           />
           <ProjectSnapshot
             title="snipeteer"
             tags={["personal"]}
             excerpt="A snippet storing service using nextjs and pSQL serverless."
-            link="#"
+            link="/blogs/snipeteer"
           />
         </div>
+        <p className="text-sm">
+          <span className="opacity-60">Check out my </span>
+          <PLink className="font-bold" href={"https://github.com/LaxmanChoudhary"} target="_blank">
+            GitHub
+          </PLink>{" "}
+          <span className="opacity-60">for more.</span>
+        </p>
       </Container>
     </div>
   );
@@ -174,11 +181,22 @@ const ProjectSnapshot = ({
   link: string;
 }) => {
   return (
-    <div className="py-10 text-sm space-y-2">
+    <div className="py-5 text-sm space-y-2">
+      {image && (
+        <Image
+          src={image}
+          alt={title}
+          width={300}
+          height={150}
+          style={{ objectFit: "cover", objectPosition: "center" }}
+        />
+      )}
       <h2 className="text-lg capitalize font-medium">{title}</h2>
       <ul className="flex gap-2 text-xs">
         {tags.map((tag) => (
-          <li className="rounded border border-purple-300 px-1" key={tag}>{tag}</li>
+          <li className="rounded border border-purple-300 px-1" key={tag}>
+            {tag}
+          </li>
         ))}
       </ul>
       <p>{excerpt}</p>
