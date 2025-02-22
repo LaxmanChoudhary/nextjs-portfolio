@@ -6,7 +6,9 @@ function BlogLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <Container>
-        {children}
+        <article className="prose prose-sm max-w-5xl dark:prose-invert">
+          {children}
+        </article>
         <footer className="text-sm mt-8">
           <PLink href={"/"}>Back to home</PLink>
         </footer>
