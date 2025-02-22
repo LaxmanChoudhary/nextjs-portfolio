@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import EduUni from "../../public/edu-uni.png";
 import Container from "@/components/shared/container";
+import { FlaskConicalIcon, FolderKanbanIcon, User2Icon } from "lucide-react";
 
 function HomePage() {
   return (
@@ -22,7 +23,7 @@ export default HomePage;
 const Header = () => {
   return (
     <header id="head">
-      <Container className="mt-24 mb-6">
+      <Container className="mt-16 sm:mt-24 mb-6">
         <h1 className="text-3xl sm:text-4xl font-medium mb-2">
           Hello! {"I'm"} Laxman.
         </h1>
@@ -45,10 +46,8 @@ const Header = () => {
 const PreviousExperience = () => {
   return (
     <div id="previous">
-      <Container className="bg-purple-50">
-        <p className="text-sm italic text-neutral-500 font-light">
-          Previously,
-        </p>
+      <Container className="bg-purple-50 dark:bg-purple-900">
+        <p className="text-sm italic opacity-75 font-light">Previously,</p>
         <div className="flex items-center pt-5">
           <Image
             src={EduUni}
@@ -58,13 +57,13 @@ const PreviousExperience = () => {
               width: "auto",
             }}
           />
-          <p className="opacity-90 text-sm pl-3 text-balance">
+          <p className="text-sm pl-3 text-balance">
             I got a{" "}
-            <span className="font-medium">
+            <span className="font-bold">
               Bachelor{"'s"} in Engineering, Information Technology
             </span>{" "}
             from the{" "}
-            <span className="font-medium">
+            <span className="font-bold">
               Aditya Silver Oak institute Of Technology
             </span>{" "}
             at Gujarat Technological University.
@@ -88,8 +87,9 @@ const Skills = () => {
   return (
     <div id="skill">
       <Container className="pt-10">
-        <p className="uppercase opacity-70 text-xs">
-          Technologies that i have worked with and familiar to
+        <p className="uppercase opacity-75">
+          <FlaskConicalIcon className="inline align-text-bottom" /> Technologies
+          that i have worked with and familiar to
         </p>
         <div className="pt-5 text-sm space-y-2">
           <Skill
@@ -119,13 +119,13 @@ const Skill = ({ title, items }: { title: string; items: Array<string> }) => {
   const _id = title.toLocaleLowerCase().split(" ").join("-");
   return (
     <div className="text-xs">
-      <label htmlFor={_id} className="opacity-70 uppercase">
+      <label htmlFor={_id} className="opacity-75 uppercase">
         {title}
       </label>
       <ul className="flex flex-wrap gap-1" id={_id}>
         {items.map((itm, _idx) => (
           <li
-            className="bg-purple-50 border border-purple-200 p-1 rounded"
+            className="bg-purple-50 dark:bg-purple-900 border border-purple-200 p-1 rounded"
             key={itm}
           >
             {itm}
@@ -140,7 +140,10 @@ const Projects = () => {
   return (
     <div id="projects">
       <Container className="">
-        <p className="uppercase opacity-70 text-xs">Here are my projects</p>
+        <p className="uppercase opacity-75">
+          <FolderKanbanIcon className="inline align-text-bottom" /> Here are my
+          projects
+        </p>
         <div className="divide-y">
           <ProjectSnapshot
             title="Latex to PDF conversion APi"
@@ -158,7 +161,7 @@ const Projects = () => {
           />
         </div>
         <p className="text-sm">
-          <span className="opacity-60">Check out my </span>
+          <span className="opacity-75">Check out my </span>
           <PLink
             className="font-bold"
             href={"https://github.com/LaxmanChoudhary"}
@@ -166,7 +169,7 @@ const Projects = () => {
           >
             GitHub
           </PLink>{" "}
-          <span className="opacity-60">for more.</span>
+          <span className="opacity-75">for more.</span>
         </p>
       </Container>
     </div>
@@ -214,12 +217,12 @@ const ProjectSnapshot = ({
 const About = () => {
   return (
     <div id="about">
-      <Container className="bg-purple-50 text-sm font-light">
-        <p className="uppercase opacity-70 text-xs pt-10 sm:pt-4">
-          A bit about me
+      <Container className="bg-purple-50 dark:bg-purple-900 text-sm">
+        <p className="uppercase opacity-75 pt-10 sm:pt-4">
+          <User2Icon className="inline align-text-bottom" /> A bit about me
         </p>
         <div className="mt-4">
-          <p className="opacity-70">What kind of work i do?</p>
+          <p className="opacity-75">What kind of work i do?</p>
           <p className="italic">
             I love tackling complex problems and building seamless, scalable
             solutions. As a full-stack developer, I focus on creating efficient,
@@ -231,7 +234,7 @@ const About = () => {
           </p>
         </div>
         <div className="mt-7">
-          <p className="opacity-70">
+          <p className="opacity-75">
             What do I do other than my full-time job?
           </p>
           <p className="italic">
@@ -244,7 +247,7 @@ const About = () => {
           </p>
         </div>
         <div className="mt-7">
-          <p className="opacity-70">
+          <p className="opacity-75">
             What am I doing when I am not in front of a screen?
           </p>
           <p className="italic">
@@ -265,7 +268,7 @@ const Footer = () => {
   return (
     <footer>
       <Container className="">
-        <p className="uppercase text-xs opacity-70">Thanks for stopping by!</p>
+        <p className="uppercase opacity-75">Thanks for stopping by!</p>
       </Container>
     </footer>
   );

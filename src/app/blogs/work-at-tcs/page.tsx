@@ -2,8 +2,11 @@ import React from "react";
 
 function Page() {
   return (
-    <article className="prose prose-sm max-w-5xl">
+    <>
       <h1 className="font-semibold">Working at tcs</h1>
+      <p>
+        since <strong>Aug 2021</strong>
+      </p>
       <div className="h-[1px] w-full bg-slate-200 my-4"></div>
       <main>
         <p>
@@ -44,30 +47,31 @@ function Page() {
         <div className="py-2">
           <p className="uppercase opacity-75">I have worked on</p>
           <div>
-            <table>
-              <thead className="text-2xl border-none">
-                <tr>
-                  <th>8</th>
-                  <th>6</th>
-                  <th>14</th>
-                  <th>4</th>
-                </tr>
-              </thead>
-              <tbody className="text-sm">
-                <tr>
-                  <td>Products</td>
-                  <td>Client teams</td>
-                  <td>Features</td>
-                  <td>Components</td>
-                </tr>
-              </tbody>
-            </table>
             <div className="grid gap-0 md:gap-2 lg:gap-0 grid-cols-2 md:grid-cols-4">
               <div className="p-1 md:p-2 lg:p-1">
-                <h2>Flexiblity with techs</h2>
+                <h2>~6</h2>
+                <p>different product development</p>
+              </div>
+              <div className="p-1 md:p-2 lg:p-1">
+                <h2>4</h2>
+                <p>different client team interactions on daily basis</p>
+              </div>
+              <div className="p-1 md:p-2 lg:p-1">
+                <h2>20+</h2>
+                <p>full features, frontend.</p>
+              </div>
+              <div className="p-1 md:p-2 lg:p-1">
+                <h2>10+</h2>
+                <p>is the size of team, used to collaborate on daily bases</p>
+              </div>
+            </div>
+            <div className="grid gap-0 md:gap-2 lg:gap-0 grid-cols-2 md:grid-cols-4">
+              <div className="p-1 md:p-2 lg:p-1">
+                <h2>Flexiblity</h2>
                 <p>
-                  Led a team of designers to define the processes for revamping
-                  our design system.
+                  Have been able to learn and grow along with requirements of
+                  the projects. Learnt multiple new frameworks and technologies
+                  along the way.
                 </p>
               </div>
               <div className="p-1 md:p-2 lg:p-1">
@@ -87,15 +91,15 @@ function Page() {
               <div className="p-1 md:p-2 lg:p-1">
                 <h2>Hiring & onboarding</h2>
                 <p>
-                  Improved hiring process for Shaw and conducted interviews to
-                  expand the team.
+                  Helped in growing team, by interviewing for different
+                  positions and improved the onboarding documentations.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </main>
-    </article>
+    </>
   );
 }
 
