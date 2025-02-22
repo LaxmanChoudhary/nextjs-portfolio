@@ -146,18 +146,24 @@ const Projects = () => {
             title="Latex to PDF conversion APi"
             tags={["personal", "docker", "k8s"]}
             excerpt="An app capable of converting latext docs to pdf. Uses tectonic engine (rust based latex processor) at core. Provides endpoint to work with."
-            link="/blogs/latex-to-pdf"
+            // link="/blogs/latex-to-pdf"
+            link="https://github.com/LaxmanChoudhary/latext-to-pdf-api-conversion"
           />
           <ProjectSnapshot
             title="snipeteer"
             tags={["personal"]}
             excerpt="A snippet storing service using nextjs and pSQL serverless."
-            link="/blogs/snipeteer"
+            link="https://github.com/LaxmanChoudhary/snippo-nextjs"
+            // link="/blogs/snipeteer"
           />
         </div>
         <p className="text-sm">
           <span className="opacity-60">Check out my </span>
-          <PLink className="font-bold" href={"https://github.com/LaxmanChoudhary"} target="_blank">
+          <PLink
+            className="font-bold"
+            href={"https://github.com/LaxmanChoudhary"}
+            target="_blank"
+          >
             GitHub
           </PLink>{" "}
           <span className="opacity-60">for more.</span>
@@ -215,10 +221,13 @@ const About = () => {
         <div className="mt-4">
           <p className="opacity-70">What kind of work i do?</p>
           <p className="italic">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            harum quae consequatur quas ea at deleniti saepe qui itaque
-            accusamus, explicabo ipsam dolorum voluptate unde hic doloremque sit
-            rem repellat!
+            I love tackling complex problems and building seamless, scalable
+            solutions. As a full-stack developer, I focus on creating efficient,
+            maintainable systems—whether it{"’"}s optimizing backend logic,
+            crafting engaging frontend experiences, or streamlining development
+            workflows. My work isn{"’"}t just about writing code; it{"’"}s about
+            ensuring every piece fits together smoothly to deliver the best
+            possible experience for users and teams alike.
           </p>
         </div>
         <div className="mt-7">
@@ -226,10 +235,12 @@ const About = () => {
             What do I do other than my full-time job?
           </p>
           <p className="italic">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Perspiciatis, magnam neque. Ullam vero deserunt tenetur rerum sequi
-            maxime incidunt illum voluptas neque voluptatum obcaecati itaque,
-            repudiandae ad quia voluptatem veritatis!
+            I{"’"}m always exploring and experimenting with new technologies and
+            frameworks. I study how different technologies and tech companies
+            approach user adoption, learning from their successes and
+            challenges. Currently, I{"’"}m diving into Next.js, Kubernetes,
+            Docker, and AWS, expanding my expertise in modern web development
+            and cloud infrastructure.
           </p>
         </div>
         <div className="mt-7">
@@ -237,10 +248,12 @@ const About = () => {
             What am I doing when I am not in front of a screen?
           </p>
           <p className="italic">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem
-            architecto doloremque enim dolorem assumenda, quae minima porro
-            sint? Quidem ab quam tempora expedita, ipsam veritatis earum vel.
-            Esse, eligendi consequatur.
+            If I{"'"}m not coding, you{"'"}ll probably find me deep into an
+            anime binge, strategizing my next move in a game, or catching a
+            cricket match. I also love diving down internet rabbit holes,
+            constantly exploring new technologies, concepts, or just random fun
+            facts. Learning never really stops for me—it just takes different
+            forms.
           </p>
         </div>
       </Container>

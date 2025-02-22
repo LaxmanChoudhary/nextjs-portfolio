@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Link, { LinkProps } from "next/link";
-import React, { LinkHTMLAttributes } from "react";
+import React from "react";
 
 export interface PLinkProps extends LinkProps {
   children: React.ReactNode;
