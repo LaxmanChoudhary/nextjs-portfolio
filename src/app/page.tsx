@@ -34,7 +34,7 @@ const Header = () => {
           </PLink>
         </h3>
         <p className="text-sm">
-          <PLink href={"/blogs/work-at-tcs"}>
+          <PLink href={"/blog/work-at-tcs"}>
             Read about my work there {">"}
           </PLink>
         </p>
@@ -157,7 +157,7 @@ const Projects = () => {
             tags={["personal"]}
             excerpt="A snippet storing service using nextjs and pSQL serverless."
             link="https://github.com/LaxmanChoudhary/snippo-nextjs"
-            // link="/blogs/snipeteer"
+            // link="/ /snipeteer"
           />
         </div>
         <p className="text-sm">

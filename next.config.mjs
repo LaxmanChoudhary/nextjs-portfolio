@@ -1,9 +1,9 @@
 import createMDX from "@next/mdx";
 import remarkGfm from "remark-gfm";
-import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypeSlug from "rehype-slug";
-import rehypePrettyCode from "rehype-pretty-code";
+// import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
+// import rehypeAutolinkHeadings from "rehype-autolink-headings";
+// import rehypeSlug from "rehype-slug";
+// import rehypePrettyCode from "rehype-pretty-code";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -24,12 +24,12 @@ const nextConfig = {
 const withMDX = createMDX({
   options: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [
-      rehypeSlug,
-      rehypeAccessibleEmojis,
-      [rehypeAutolinkHeadings, {properties: {className: ['anchor']}}],
-      [rehypePrettyCode, {}],
-    ],
+    // rehypePlugins: [
+    //   rehypeSlug,
+    //   rehypeAccessibleEmojis,
+    //   [rehypeAutolinkHeadings, {properties: {className: ['anchor']}}],
+    //   [rehypePrettyCode, {}],
+    // ],
   },
 });
 
