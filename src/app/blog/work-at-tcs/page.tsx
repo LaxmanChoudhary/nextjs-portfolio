@@ -47,10 +47,10 @@ function Page() {
         <div className="py-2">
           <p className="uppercase opacity-75">I have worked on</p>
           <div>
-            <div className="grid gap-0 md:gap-2 lg:gap-0 grid-cols-2 md:grid-cols-4">
+            {/* <div className="grid gap-0 md:gap-2 lg:gap-0 grid-cols-3">
               <div className="p-1 md:p-2 lg:p-1">
                 <h2>~6</h2>
-                <p>different product development</p>
+                <p>different product development i was involved in</p>
               </div>
               <div className="p-1 md:p-2 lg:p-1">
                 <h2>4</h2>
@@ -60,14 +60,10 @@ function Page() {
                 <h2>20+</h2>
                 <p>full features, frontend.</p>
               </div>
+            </div> */}
+            <div className="grid gap-0 md:gap-2 lg:gap-0 grid-cols-2 sm:grid-cols-3">
               <div className="p-1 md:p-2 lg:p-1">
-                <h2>10+</h2>
-                <p>is the size of team, used to collaborate on daily bases</p>
-              </div>
-            </div>
-            <div className="grid gap-0 md:gap-2 lg:gap-0 grid-cols-2 md:grid-cols-4">
-              <div className="p-1 md:p-2 lg:p-1">
-                <h2>Flexiblity</h2>
+                <h2>Continuous improvement</h2>
                 <p>
                   Have been able to learn and grow along with requirements of
                   the projects. Learnt multiple new frameworks and technologies
@@ -75,17 +71,10 @@ function Page() {
                 </p>
               </div>
               <div className="p-1 md:p-2 lg:p-1">
-                <h2>Something extra</h2>
+                <h2>Mentoring</h2>
                 <p>
-                  Created novel guidelines for designing smaller size icons for
-                  dense enterprise products.
-                </p>
-              </div>
-              <div className="p-1 md:p-2 lg:p-1">
-                <h2>Mentoring new teammates</h2>
-                <p>
-                  Mentored a summer intern who was offered a full time position
-                  at D. E. Shaw.
+                  Mentored and helped multiple teammates in improving code
+                  quality, involved in multiple code review excercises.
                 </p>
               </div>
               <div className="p-1 md:p-2 lg:p-1">
