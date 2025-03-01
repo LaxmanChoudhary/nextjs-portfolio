@@ -4,6 +4,7 @@ import React from "react";
 import EduUni from "../../public/edu-uni.png";
 import Container from "@/components/shared/container";
 import { FlaskConicalIcon, FolderKanbanIcon, User2Icon } from "lucide-react";
+import { PLACEHOLDER_RESUME_LINK } from "@/lib/constants";
 
 function HomePage() {
   return (
@@ -72,7 +73,7 @@ const PreviousExperience = () => {
         <p className="text-sm mt-8">
           More details are in my{" "}
           <PLink
-            href="https://drive.google.com/file/d/1-KBWPf95WFaOfQSeWl8vb6cetlXpXN5C/view?usp=sharing"
+            href={process.env.NEXT_PUBLIC_RESUME_LINK || PLACEHOLDER_RESUME_LINK}
             target="_blank"
           >
             resume.
