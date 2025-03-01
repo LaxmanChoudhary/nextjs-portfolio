@@ -1,0 +1,1 @@
+export const PLACEHOLDER_RESUME_LINK="https://drive.google.com/file/d/1-KBWPf95WFaOfQSeWl8vb6cetlXpXN5C/view?usp=sharing"
