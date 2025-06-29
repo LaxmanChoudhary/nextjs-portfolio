@@ -47,44 +47,6 @@ function Page() {
         <div className="py-2">
           <p className="uppercase opacity-75">I have worked on</p>
           <div>
-            {/* <div className="grid gap-0 md:gap-2 lg:gap-0 grid-cols-3">
-              <div className="p-1 md:p-2 lg:p-1">
-                <h2>~6</h2>
-                <p>different product development i was involved in</p>
-              </div>
-              <div className="p-1 md:p-2 lg:p-1">
-                <h2>4</h2>
-                <p>different client team interactions on daily basis</p>
-              </div>
-              <div className="p-1 md:p-2 lg:p-1">
-                <h2>20+</h2>
-                <p>full features, frontend.</p>
-              </div>
-            </div> */}
-            <div className="grid gap-0 md:gap-2 lg:gap-0 grid-cols-2 sm:grid-cols-3">
-              <div className="p-1 md:p-2 lg:p-1">
-                <h2>Continuous improvement</h2>
-                <p>
-                  Have been able to learn and grow along with requirements of
-                  the projects. Learnt multiple new frameworks and technologies
-                  along the way.
-                </p>
-              </div>
-              <div className="p-1 md:p-2 lg:p-1">
-                <h2>Mentoring</h2>
-                <p>
-                  Mentored and helped multiple teammates in improving code
-                  quality, involved in multiple code review excercises.
-                </p>
-              </div>
-              <div className="p-1 md:p-2 lg:p-1">
-                <h2>Hiring & onboarding</h2>
-                <p>
-                  Helped in growing team, by interviewing for different
-                  positions and improved the onboarding documentations.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </main>
