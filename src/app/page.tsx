@@ -5,13 +5,15 @@ import EduUni from "../../public/edu-uni.png";
 import Container from "@/components/shared/container";
 import { FlaskConicalIcon, FolderKanbanIcon, User2Icon } from "lucide-react";
 import { PLACEHOLDER_RESUME_LINK } from "@/lib/constants";
+import AllSkills from "@/components/section/skills";
 
 function HomePage() {
   return (
     <div>
       <Header />
       <PreviousExperience />
-      <Skills />
+      {/* <Skills /> */}
+      <AllSkills />
       <Projects />
       <About />
       <Footer />
@@ -30,15 +32,15 @@ const Header = () => {
         </h1>
         <h3 className="text-lg mt-2">
           {"I'm"} a full stack developer at{" "}
-          <PLink href={"https://www.tcs.com/"}>
+          <PLink href={"https://www.tcs.com/"} target="_blank">
             Tata Consultancy Services.
           </PLink>
         </h3>
-        <p className="text-sm">
+        {/* <p className="text-sm">
           <PLink href={"/blog/work-at-tcs"}>
             Read about my work there {">"}
           </PLink>
-        </p>
+        </p> */}
       </Container>
     </header>
   );
