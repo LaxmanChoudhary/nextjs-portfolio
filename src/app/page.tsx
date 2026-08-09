@@ -1,9 +1,9 @@
 import PLink from "@/components/shared/link";
 import Image from "next/image";
-import React from "react";
+import Work from "../../public/briefcase.png";
 import EduUni from "../../public/edu-uni.png";
 import Container from "@/components/shared/container";
-import { FlaskConicalIcon, FolderKanbanIcon, User2Icon } from "lucide-react";
+import { FolderKanbanIcon, User2Icon } from "lucide-react";
 import { PLACEHOLDER_RESUME_LINK } from "@/lib/constants";
 import AllSkills from "@/components/section/skills";
 
@@ -12,9 +12,8 @@ function HomePage() {
     <div>
       <Header />
       <PreviousExperience />
-      {/* <Skills /> */}
       <AllSkills />
-      <Projects />
+      {/* <Projects /> */}
       <About />
       <Footer />
     </div>
@@ -32,8 +31,8 @@ const Header = () => {
         </h1>
         <h3 className="text-lg mt-2">
           {"I'm"} a full stack developer at{" "}
-          <PLink href={"https://www.tcs.com/"} target="_blank">
-            Tata Consultancy Services.
+          <PLink href={"https://www.pwc.com/"} target="_blank">
+            PriceWaterhouseCoopers (PwC).
           </PLink>
         </h3>
         {/* <p className="text-sm">
@@ -53,6 +52,23 @@ const PreviousExperience = () => {
         <p className="text-sm italic opacity-75 font-light">Previously,</p>
         <div className="flex items-center pt-5">
           <Image
+            src={Work}
+            alt="work experience"
+            style={{
+              height: "45px",
+              width: "auto",
+            }}
+          />
+          <p className="text-sm pl-3 text-left">
+            Worked as <span className="font-bold">full stack developer</span>{" "}
+            at{" "}
+            <span className="font-bold">Tata Consultancy Services (TCS),</span>{" "}
+            <span className="italic">Gandhinagar, Gujarat</span> during period
+            of <span className="font-bold">Aug 2021 - Feb 2026.</span>
+          </p>
+        </div>
+        <div className="flex items-center pt-5">
+          <Image
             src={EduUni}
             alt="university education"
             style={{
@@ -60,59 +76,30 @@ const PreviousExperience = () => {
               width: "auto",
             }}
           />
-          <p className="text-sm pl-3 text-balance">
-            I got a{" "}
+          <p className="text-sm pl-3 text-left">
+            Received degree in {" "}
             <span className="font-bold">
-              Bachelor{"'s"} in Engineering, Information Technology
+              Bachelor{"'s"} of Engineering, Information Technology
             </span>{" "}
-            from the{" "}
+            from {" "}
             <span className="font-bold">
-              Aditya Silver Oak institute Of Technology
+              Gujarat Technological University,  
             </span>{" "}
-            at Gujarat Technological University.
+            Aditya Silver Oak institute Of Technology, in {" "}
+            <span className="font-bold">2020.</span>
           </p>
         </div>
         <p className="text-sm mt-8">
           More details are in my{" "}
           <PLink
-            href={process.env.NEXT_PUBLIC_RESUME_LINK || PLACEHOLDER_RESUME_LINK}
+            href={
+              process.env.NEXT_PUBLIC_RESUME_LINK || PLACEHOLDER_RESUME_LINK
+            }
             target="_blank"
           >
             resume.
           </PLink>
         </p>
-      </Container>
-    </div>
-  );
-};
-
-const Skills = () => {
-  return (
-    <div id="skill">
-      <Container className="pt-10">
-        <p className="uppercase opacity-75">
-          <FlaskConicalIcon className="inline align-text-bottom" /> Technologies
-          that i have worked with and familiar to
-        </p>
-        <div className="pt-5 text-sm space-y-2">
-          <Skill
-            title="frontend"
-            items={["Javascript", "React", "NextJs", "Angular"]}
-          />
-          <Skill title="Backend" items={["Python", "Django", "Flask"]} />
-          <Skill
-            title="Concepts"
-            items={[
-              "Git",
-              "SQL",
-              "NoSQL",
-              "Dockerization (Docker)",
-              "k8s (Kubernetes)",
-              "Functional Programming",
-              "Object Oriented Programming",
-            ]}
-          />
-        </div>
       </Container>
     </div>
   );
