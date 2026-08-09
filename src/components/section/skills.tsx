@@ -7,7 +7,7 @@ import TsIcon from "../../../public/icons/typescript.svg";
 
 import Django from "../../../public/icons/django-plain.svg";
 import DjangoRest from "../../../public/icons/djangorest.svg";
-import Flask from "../../../public/icons/flask.svg";
+import FastAPI from "../../../public/icons/fastapi.svg";
 import Angular from "../../../public/icons/angular.svg";
 import ReactIcon from "../../../public/icons/react.svg";
 
@@ -87,8 +87,8 @@ const FrameWorks = () => {
       title: "django-rest framework",
     },
     {
-      icon: Flask,
-      title: "flask",
+      icon: FastAPI,
+      title: "fastapi",
     },
     {
       icon: Angular,
